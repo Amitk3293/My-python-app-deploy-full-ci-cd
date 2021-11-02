@@ -1,0 +1,4 @@
+CurrencyConverter==0.16.5
+selenium==3.141.0
+Flask==2.0.2
+currency_converter==0.5.5

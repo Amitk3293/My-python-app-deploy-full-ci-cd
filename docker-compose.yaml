@@ -1,0 +1,19 @@
+
+version: "3.7"
+services:
+  wog:
+    image: docker.io/amitk3293/wog-app:v2
+    stdin_open: true # docker run -i
+    tty: true # docker run -t
+    volumes:
+      - .:/app
+    ports:
+      - 8000:8000
+  wog-test:
+    image: docker.io/amitk3293/wog-flask:v2
+    volumes:
+      - .:/app
+    depends_on:
+      - wog
+    ports:
+      - 5000:5000
